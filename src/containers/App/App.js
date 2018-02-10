@@ -8,20 +8,21 @@ const HomeScreen = ({ navigation }) => (
   <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
     <View style={{ flex: 1 }}>
       <ScrollView>
-        <Text>Home</Text>
+        <Text style={{ fontFamily: 'Roboto', fontSize: 64 }}>Home</Text>
+        <Text style={{ fontSize: 64 }}>Home</Text>
         <Button
           onPress={() => navigation.navigate('Profile', { name: 'Pettya' })}
           title="Open profile screen"
         />
         <Button onPress={() => navigation.goBack(null)} title="Go back" />
         <Icon
-          source={require('../../assets/images/icons8-plus-100.png')}
+          source={require('../../../assets/images/icons8-plus-100.png')}
           size={50}
           tintColor="green"
           onPress={() => alert('test')}
         />
         <Icon
-          source={require('../../assets/images/icons8-plus-100.png')}
+          source={require('../../../assets/images/icons8-plus-100.png')}
           size={50}
           tintColor="grey"
         />
