@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import styles from './TabBarStyles';
 
 class TabBar extends React.Component {
@@ -16,18 +16,60 @@ class TabBar extends React.Component {
 
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.tab} onPress={() => this.handleNavigate('Home')}>
+        <TouchableOpacity
+          style={styles.tab}
+          activeOpacity={1}
+          onPress={() => this.handleNavigate('Store')}
+        >
           <Image
-            source={require('../../../assets/images/icons8-home-100.png')}
+            source={require('../../../assets/images/icons8-shop-100.png')}
             fadeDuration={0}
-            style={{ width: 25, height: 25, tintColor: routeName === 'Home' ? '#6a51ae' : '#aaa' }}
+            style={[
+              styles.tabIcon,
+              { tintColor: routeName === 'Store' ? '#ff1744' : '#ccc' }
+            ]}
           />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.tab} onPress={() => this.handleNavigate('Settings')}>
+        <TouchableOpacity
+          style={styles.tab}
+          activeOpacity={1}
+          onPress={() => this.handleNavigate('Favorites')}
+        >
+          <Image
+            source={require('../../../assets/images/icons8-heart-100.png')}
+            fadeDuration={0}
+            style={[
+              styles.tabIcon,
+              { tintColor: routeName === 'Favorites' ? '#ff1744' : '#ccc' }
+            ]}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.tab}
+          activeOpacity={1}
+          onPress={() => this.handleNavigate('Cart')}
+        >
+          <Image
+            source={require('../../../assets/images/icons8-shopping-cart-100.png')}
+            fadeDuration={0}
+            style={[
+              styles.tabIcon,
+              { tintColor: routeName === 'Cart' ? '#ff1744' : '#ccc' }
+            ]}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.tab}
+          activeOpacity={1}
+          onPress={() => this.handleNavigate('Profile')}
+        >
           <Image
             source={require('../../../assets/images/icons8-user-male-100.png')}
             fadeDuration={0}
-            style={{ width: 25, height: 25, tintColor: routeName === 'Settings' ? '#6a51ae' : '#aaa' }}
+            style={[
+              styles.tabIcon,
+              { tintColor: routeName === 'Profile' ? '#ff1744' : '#ccc' }
+            ]}
           />
         </TouchableOpacity>
       </View>

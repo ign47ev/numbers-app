@@ -19,8 +19,20 @@ class Icon extends React.Component {
   }
 
   renderTouchableImage() {
+    const { size, wrapperSize } = this.props;
+    const padding = wrapperSize > size
+      ? (wrapperSize - size) / 2
+      : 0;
+
     return (
-      <TouchableOpacity onPress={this.props.onPress}>
+      <TouchableOpacity
+        onPress={this.props.onPress}
+        style={{
+          width: size + (padding * 2),
+          height: size + (padding * 2),
+          padding: padding,
+        }}
+      >
         {this.renderImage()}
       </TouchableOpacity>
     );
