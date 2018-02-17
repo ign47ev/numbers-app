@@ -1,21 +1,35 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
+import { withNavigation } from 'react-navigation';
 import Icon from '../Icon/Icon';
+import { Images, Colors } from '@themes';
 import styles from './NavBarStyles';
 
 class NavBar extends React.Component {
 
+  static propTypes = {
+    navigation: PropTypes.shape(),
+    overContent: PropTypes.bool,
+    style: PropTypes.shape(),
+  };
+
+  static defaultProps = {
+    overContent: false,
+    style: null,
+  };
+
   render() {
-    const { navigation } = this.props;
+    const { navigation, overContent, style } = this.props;
 
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, overContent ? styles.containerAbsolute : null, style]}>
         <View style={styles.left}>
           <Icon
-            source={require('../../../assets/images/icons8-back-100.png')}
+            source={Images.back}
             size={25}
             wrapperSize={50}
-            tintColor="#ff1744"
+            tintColor={Colors.blueGrey500}
             onPress={() => navigation.goBack()}
           />
         </View>
@@ -30,10 +44,10 @@ class NavBar extends React.Component {
         </View>
         <View style={styles.right}>
           <Icon
-            source={require('../../../assets/images/icons8-plus-100.png')}
+            source={Images.plus}
             size={25}
             wrapperSize={50}
-            tintColor="#ff1744"
+            tintColor={Colors.blueGrey500}
             onPress={() => navigation.goBack()}
           />
         </View>
@@ -42,4 +56,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default withNavigation(NavBar);

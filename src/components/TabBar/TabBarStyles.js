@@ -10,6 +10,13 @@ export default styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: '#eee',
     backgroundColor: '#fff',
+
+  },
+  containerAbsolute: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
   },
   tab: {
     flex: 1,

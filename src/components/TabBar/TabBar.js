@@ -1,8 +1,22 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { View, Image, TouchableOpacity } from 'react-native';
+import { withNavigation } from 'react-navigation';
+import { Images, Colors } from '@themes';
 import styles from './TabBarStyles';
 
 class TabBar extends React.Component {
+
+  static propTypes = {
+    navigation: PropTypes.shape(),
+    overContent: PropTypes.bool,
+    style: PropTypes.shape(),
+  };
+
+  static defaultProps = {
+    overContent: false,
+    style: null,
+  };
 
   handleNavigate = routeName => {
     const { navigation } = this.props;
@@ -12,21 +26,22 @@ class TabBar extends React.Component {
   };
 
   render() {
-    const { routeName } = this.props.navigation.state;
+    const { navigation, overContent, style } = this.props;
+    const { routeName } = navigation.state;
 
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, overContent ? styles.containerAbsolute : null, style]}>
         <TouchableOpacity
           style={styles.tab}
           activeOpacity={1}
           onPress={() => this.handleNavigate('Store')}
         >
           <Image
-            source={require('../../../assets/images/icons8-shop-100.png')}
+            source={Images.shop}
             fadeDuration={0}
             style={[
               styles.tabIcon,
-              { tintColor: routeName === 'Store' ? '#ff1744' : '#ccc' }
+              { tintColor: routeName === 'Store' ? Colors.blueGrey500 : Colors.blueGrey100 }
             ]}
           />
         </TouchableOpacity>
@@ -36,11 +51,11 @@ class TabBar extends React.Component {
           onPress={() => this.handleNavigate('Favorites')}
         >
           <Image
-            source={require('../../../assets/images/icons8-heart-100.png')}
+            source={Images.heart}
             fadeDuration={0}
             style={[
               styles.tabIcon,
-              { tintColor: routeName === 'Favorites' ? '#ff1744' : '#ccc' }
+              { tintColor: routeName === 'Favorites' ? Colors.blueGrey500 : Colors.blueGrey100 }
             ]}
           />
         </TouchableOpacity>
@@ -50,11 +65,11 @@ class TabBar extends React.Component {
           onPress={() => this.handleNavigate('Cart')}
         >
           <Image
-            source={require('../../../assets/images/icons8-shopping-cart-100.png')}
+            source={Images.shoppingCart}
             fadeDuration={0}
             style={[
               styles.tabIcon,
-              { tintColor: routeName === 'Cart' ? '#ff1744' : '#ccc' }
+              { tintColor: routeName === 'Cart' ? Colors.blueGrey500 : Colors.blueGrey100 }
             ]}
           />
         </TouchableOpacity>
@@ -64,11 +79,11 @@ class TabBar extends React.Component {
           onPress={() => this.handleNavigate('Profile')}
         >
           <Image
-            source={require('../../../assets/images/icons8-user-male-100.png')}
+            source={Images.userMale}
             fadeDuration={0}
             style={[
               styles.tabIcon,
-              { tintColor: routeName === 'Profile' ? '#ff1744' : '#ccc' }
+              { tintColor: routeName === 'Profile' ? Colors.blueGrey500 : Colors.blueGrey100 }
             ]}
           />
         </TouchableOpacity>
@@ -77,4 +92,4 @@ class TabBar extends React.Component {
   }
 }
 
-export default TabBar;
+export default withNavigation(TabBar);

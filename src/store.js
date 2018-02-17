@@ -1,15 +1,17 @@
 import { applyMiddleware, createStore, compose } from 'redux';
+import { persistStore } from 'redux-persist';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import reducers from './reducers';
+import { rootReducer } from './reducers';
 
 const logger = createLogger({
   collapsed: true,
-  duration: true,
-  timestamp: true,
-  level: 'info',
+  duration: false,
+  timestamp: false,
 });
 
-const middlewares = applyMiddleware(logger, thunk);
-
-export const configureStore = () => createStore(reducers, compose(middlewares));
+export const configureStore = () => {
+  const store = createStore(rootReducer, compose(applyMiddleware(logger, thunk)));
+  const persistor = persistStore(store);
+  return { persistor, store };
+};

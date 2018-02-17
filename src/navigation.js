@@ -1,10 +1,10 @@
 import React from 'react';
 import { StackNavigator, TabNavigator } from 'react-navigation';
-import Store from '../../screens/Store/Store';
-import Favorites from '../../screens/Favorites/Favorites';
-import Cart from '../../screens/Cart/Cart';
-import Profile from '../../screens/Profile/Profile';
-import Blank from '../../screens/Blank/Blank';
+import Store from './screens/Store/Store';
+import Favorites from './screens/Favorites/Favorites';
+import Cart from './screens/Cart/Cart';
+import Profile from './screens/Profile/Profile';
+import Blank from './screens/Blank/Blank';
 
 const TabNav = TabNavigator(
   {

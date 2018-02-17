@@ -1,21 +1,35 @@
 import React from 'react';
-import { Button, View, StatusBar, Text } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
-import NavBar from '../../components/NavBar/NavBar';
+import { ScrollView, Button, Text } from 'react-native';
+import Screen from '../../components/Screen/Screen';
+import Icon from '../../components/Icon/Icon';
+import { Images, Colors } from '@themes';
 
 class Blank extends React.Component {
   render() {
     const { navigation } = this.props;
 
     return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
-        <NavBar navigation={navigation} />
-        <View style={{ flex: 1 }}>
+      <Screen navigation={navigation}
+              // safeAreaColor="green"
+              // statusBarColor="light-content"
+              tabBarVisible={false}
+      >
+        <ScrollView>
           <Text>Blank</Text>
           <Button onPress={() => navigation.goBack(null)} title="Go back" />
-        </View>
-        <StatusBar barStyle="default" />
-      </SafeAreaView>
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey50} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey100} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey200} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey300} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey400} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey500} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey600} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey700} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey800} />
+          <Icon source={Images.plus} size={50} tintColor={Colors.blueGrey900} />
+        </ScrollView>
+      </Screen>
     );
   }
 }

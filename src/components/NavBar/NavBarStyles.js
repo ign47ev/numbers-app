@@ -2,14 +2,21 @@ import { StyleSheet } from 'react-native';
 
 export default styles = StyleSheet.create({
   container: {
+    zIndex: 10,
     flex: 0,
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     height: 56,
     borderBottomWidth: 1,
     borderBottomColor: '#eee',
     backgroundColor: '#fff',
+  },
+  containerAbsolute: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
   },
   left: {
     flex: 0,

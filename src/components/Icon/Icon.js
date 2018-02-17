@@ -7,7 +7,6 @@ class Icon extends React.Component {
     return (
       <Image
         source={this.props.source}
-        defaultSource={this.props.source}
         style={{
           width: this.props.size,
           height: this.props.size,

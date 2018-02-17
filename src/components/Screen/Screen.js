@@ -9,35 +9,34 @@ import styles from './ScreenStyles';
 class Screen extends React.Component {
 
   static propTypes = {
-    navigation: PropTypes.shape().isRequired,
-    children: PropTypes.element,
-    statusBarStyle: PropTypes.string,
+    children: PropTypes.oneOfType(PropTypes.element, PropTypes.array),
+    safeAreaColor: PropTypes.string,
+    statusBarColor: PropTypes.string,
     navBarVisible: PropTypes.bool,
     tabBarVisible: PropTypes.bool,
   };
 
   static defaultProps = {
-    statusBarStyle: 'default',
+    safeAreaColor: '#fff',
+    statusBarColor: 'default',
     navBarVisible: true,
     tabBarVisible: true,
   };
 
   render() {
-    const {
-      children,
-      navigation,
-      navBarVisible,
-      tabBarVisible,
-    } = this.props;
+    const { children, safeAreaColor, statusBarColor, navBarVisible, tabBarVisible } = this.props;
 
     return (
-      <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="default" />
-        {navBarVisible && <NavBar navigation={navigation} />}
-        <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : null} style={styles.content}>
+      <SafeAreaView style={[styles.container, { backgroundColor: safeAreaColor }]}>
+        <StatusBar barStyle={statusBarColor} />
+        {navBarVisible && <NavBar />}
+        <KeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'padding' : null}
+          style={styles.content}
+        >
           {children}
         </KeyboardAvoidingView>
-        {tabBarVisible && <TabBar navigation={navigation} />}
+        {tabBarVisible && <TabBar />}
       </SafeAreaView>
     );
   }

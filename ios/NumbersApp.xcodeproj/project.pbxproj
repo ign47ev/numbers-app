@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -21,6 +22,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		2B88E865D2C14C52B076487F /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 817A08AD741B4170A8A98972 /* Roboto-Bold.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -33,14 +35,14 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* NumbersAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NumbersAppTests.m */; };
+		56AAD3ED8EFC4E88B52294A5 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7E38797A87947E092AE71CD /* Roboto-Medium.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		7F50CE402037137400F75659 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F50CE242037135A00F75659 /* libRCTPushNotification.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		96853FC5852748B2BB280E35 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 037E3A01EF7E443AA0AC3D8C /* Roboto-Black.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		535443A2335F4E8B90710735 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5820CBD392764AEE9789082A /* Roboto-Regular.ttf */; };
-		6638366D759F413ABE00617D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B401DC9D3ED43A3BDC60C77 /* Roboto-Black.ttf */; };
-		0375BCB06FB345CD90A0C51B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23C564569A7F44D6939D487B /* Roboto-Bold.ttf */; };
-		15777911FF294F859465CFD9 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 014683CA8D8C4AC2A7136758 /* Roboto-Light.ttf */; };
-		A6F7AE1E8111466F96264719 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A5BA43A9D1459582673679 /* Roboto-Medium.ttf */; };
+		D2C0EA16B1B64493BF7C4E98 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31D4859F09634298963DC72F /* Roboto-Regular.ttf */; };
+		E50F1B279FCA4BA8A5994138 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4013CB4F5C2E4EBF9F084599 /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -303,6 +305,20 @@
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
 		};
+		7F50CE232037135A00F75659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F50CE122037135A00F75659 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTPushNotification;
+		};
+		7F50CE252037135A00F75659 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F50CE122037135A00F75659 /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D05745F1DE6004600184BB4;
+			remoteInfo = "RCTPushNotification-tvOS";
+		};
 		832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
@@ -329,6 +345,7 @@
 		00E356EE1AD99517003FC87E /* NumbersAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbersAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* NumbersAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumbersAppTests.m; sourceTree = "<group>"; };
+		037E3A01EF7E443AA0AC3D8C /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../src/assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* NumbersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumbersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,15 +359,16 @@
 		2D02E47B1E0B4A5D006451C7 /* NumbersApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NumbersApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* NumbersApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NumbersApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		31D4859F09634298963DC72F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		4013CB4F5C2E4EBF9F084599 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7F50CE122037135A00F75659 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		7FAC3EE9203768F100CCC2FF /* NumbersApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = NumbersApp.entitlements; path = NumbersApp/NumbersApp.entitlements; sourceTree = "<group>"; };
+		817A08AD741B4170A8A98972 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../src/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		5820CBD392764AEE9789082A /* Roboto-Regular.ttf */ = {isa = PBXFileReference; name = "Roboto-Regular.ttf"; path = "../assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5B401DC9D3ED43A3BDC60C77 /* Roboto-Black.ttf */ = {isa = PBXFileReference; name = "Roboto-Black.ttf"; path = "../assets/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		23C564569A7F44D6939D487B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; name = "Roboto-Bold.ttf"; path = "../assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		014683CA8D8C4AC2A7136758 /* Roboto-Light.ttf */ = {isa = PBXFileReference; name = "Roboto-Light.ttf"; path = "../assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B4A5BA43A9D1459582673679 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; name = "Roboto-Medium.ttf"; path = "../assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C7E38797A87947E092AE71CD /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../src/assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +384,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F50CE402037137400F75659 /* libRCTPushNotification.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -489,6 +508,7 @@
 		13B07FAE1A68108700A75B9A /* NumbersApp */ = {
 			isa = PBXGroup;
 			children = (
+				7FAC3EE9203768F100CCC2FF /* NumbersApp.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -549,9 +569,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7F50CE132037135A00F75659 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F50CE242037135A00F75659 /* libRCTPushNotification.a */,
+				7F50CE262037135A00F75659 /* libRCTPushNotification-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				7F50CE122037135A00F75659 /* RCTPushNotification.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -613,17 +643,16 @@
 			sourceTree = "<group>";
 		};
 		D70CAD2A962647A08A47850B /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
-				5820CBD392764AEE9789082A /* Roboto-Regular.ttf */,
-				5B401DC9D3ED43A3BDC60C77 /* Roboto-Black.ttf */,
-				23C564569A7F44D6939D487B /* Roboto-Bold.ttf */,
-				014683CA8D8C4AC2A7136758 /* Roboto-Light.ttf */,
-				B4A5BA43A9D1459582673679 /* Roboto-Medium.ttf */,
+				037E3A01EF7E443AA0AC3D8C /* Roboto-Black.ttf */,
+				817A08AD741B4170A8A98972 /* Roboto-Bold.ttf */,
+				4013CB4F5C2E4EBF9F084599 /* Roboto-Light.ttf */,
+				C7E38797A87947E092AE71CD /* Roboto-Medium.ttf */,
+				31D4859F09634298963DC72F /* Roboto-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -716,6 +745,11 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = G798Q973Y8;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -769,6 +803,10 @@
 				{
 					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = 7F50CE132037135A00F75659 /* Products */;
+					ProjectRef = 7F50CE122037135A00F75659 /* RCTPushNotification.xcodeproj */;
 				},
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
@@ -1047,6 +1085,20 @@
 			remoteRef = 7F310B02202E4AD600FE93E4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		7F50CE242037135A00F75659 /* libRCTPushNotification.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTPushNotification.a;
+			remoteRef = 7F50CE232037135A00F75659 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7F50CE262037135A00F75659 /* libRCTPushNotification-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTPushNotification-tvOS.a";
+			remoteRef = 7F50CE252037135A00F75659 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		832341B51AAA6A8300B99B32 /* libRCTText.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1077,11 +1129,11 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				535443A2335F4E8B90710735 /* Roboto-Regular.ttf in Resources */,
-				6638366D759F413ABE00617D /* Roboto-Black.ttf in Resources */,
-				0375BCB06FB345CD90A0C51B /* Roboto-Bold.ttf in Resources */,
-				15777911FF294F859465CFD9 /* Roboto-Light.ttf in Resources */,
-				A6F7AE1E8111466F96264719 /* Roboto-Medium.ttf in Resources */,
+				96853FC5852748B2BB280E35 /* Roboto-Black.ttf in Resources */,
+				2B88E865D2C14C52B076487F /* Roboto-Bold.ttf in Resources */,
+				E50F1B279FCA4BA8A5994138 /* Roboto-Light.ttf in Resources */,
+				56AAD3ED8EFC4E88B52294A5 /* Roboto-Medium.ttf in Resources */,
+				D2C0EA16B1B64493BF7C4E98 /* Roboto-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1243,6 +1295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NumbersApp/NumbersApp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = G798Q973Y8;
@@ -1254,6 +1307,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.numbers.app;
 				PRODUCT_NAME = NumbersApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1263,6 +1317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NumbersApp/NumbersApp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G798Q973Y8;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -1273,6 +1328,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.numbers.app;
 				PRODUCT_NAME = NumbersApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
