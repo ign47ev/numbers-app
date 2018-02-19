@@ -1,15 +1,17 @@
-import { ADD_PERSON, DELETE_PERSON } from '../constants';
+import actionIds from '../constants/actions';
 
-export function addPerson(person) {
+const addPerson = (person) => {
   return {
-    type: 'ADD_PERSON',
+    type: actionIds.ADD_PERSON,
     person,
   };
-}
+};
 
-export function deletePerson(person) {
+const deletePerson = (personId) => {
   return {
-    type: 'DELETE_PERSON',
-    person,
+    type: actionIds.DELETE_PERSON,
+    personId,
   };
-}
+};
+
+export default { addPerson, deletePerson };

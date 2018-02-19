@@ -1,12 +1,16 @@
-import { GET_TOKEN } from '../constants/auth';
+import actionsIds from '../constants/actions';
 
-const initialState = { token: 'TOKEN_VALUE' };
+const initialState = { token: '' };
 
-export default function authReducer(state = initialState, action) {
+export default authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_TOKEN:
+    case actionsIds.SET_TOKEN:
       return {
         token: action.token,
+      };
+    case actionsIds.CLEAR_TOKEN:
+      return {
+        token: '',
       };
     default:
       return state;

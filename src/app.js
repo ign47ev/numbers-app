@@ -13,12 +13,14 @@ class App extends React.Component {
   componentDidMount() {
     AppState.addEventListener('change', this.handleAppStateChange.bind(this));
     PushNotification.configure({
-      onRegister: function (token) {
+      onRegister: token => {
         console.log('TOKEN:', token);
       },
-      onNotification: function (notification) {
+      onNotification: notification => {
         console.log('NOTIFICATION:', notification);
       },
+      senderID: '298907105644',
+      requestPermissions: true,
     });
   }
 
@@ -30,7 +32,7 @@ class App extends React.Component {
     if (appState === 'background') {
       PushNotification.localNotificationSchedule({
         message: "My Notification Message",
-        date: new Date(Date.now() + (60 * 1000)) // in 60 secs
+        date: new Date(Date.now() + 2000),
       });
     }
   };

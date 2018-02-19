@@ -1,16 +1,18 @@
 import { AsyncStorage } from 'react-native';
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
-import people from './people';
-import auth from './auth';
+import numbersReducer from './numbers';
+import peopleReducer from './people';
+import authReducer from './auth';
 
-const peoplePersistConfig = {
-  key: 'people',
+const authPersist = {
+  key: 'auth',
   storage: AsyncStorage,
-  whitelist: ['people'],
+  whitelist: ['token'],
 };
 
 export const rootReducer = combineReducers({
-  auth,
-  people: persistReducer(peoplePersistConfig, people),
+  auth: persistReducer(authPersist, authReducer),
+  people: peopleReducer,
+  numbers: numbersReducer,
 });

@@ -1,16 +1,20 @@
-import { ADD_PERSON, DELETE_PERSON } from '../constants';
+import actionIds from '../constants/actions';
 
-const initialState = { people: [{ name: 'Chris' }] };
+const initialState = {
+  persons: [
+    { id: 0, name: 'Piter' },
+  ]
+};
 
-export default function peopleReducer(state = initialState, action) {
+export default peopleReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_PERSON:
+    case actionIds.ADD_PERSON:
       return {
-        people: [...state.people, action.person],
+        persons: [...state.persons, action.person],
       };
-    case DELETE_PERSON:
+    case actionIds.DELETE_PERSON:
       return {
-        people: state.people.filter(person => person.name !== action.person.name),
+        persons: state.persons.filter(person => person.id !== action.personId),
       };
     default:
       return state;

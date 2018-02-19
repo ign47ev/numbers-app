@@ -9,9 +9,8 @@ import {
   ScrollView,
   View,
   Button,
-  Keyboard,
 } from 'react-native';
-import { addPerson, deletePerson } from '../../actions/people';
+import { People, Auth } from '../../actions';
 import styles from './FormStyles'
 
 class Form extends React.Component {
@@ -22,13 +21,15 @@ class Form extends React.Component {
   };
 
   addPerson = () => {
-    const { text } = this.state;
-    this.props.dispatchAddPerson({ name: text });
-    this.setState({ text: Date.now().toString() });
+    const newPerson = {
+      id: +Date.now().toString(),
+      name: this.state.text,
+    };
+    this.props.dispatchAddPerson(newPerson);
   };
 
-  deletePerson = person => {
-    this.props.dispatchDeletePerson(person);
+  deletePerson = personId => {
+    this.props.dispatchDeletePerson(personId);
   };
 
   handleSwitch = () => {
@@ -38,16 +39,20 @@ class Form extends React.Component {
   };
 
   render() {
-    const { people } = this.props;
+    const { token, persons } = this.props;
 
     return (
       <ScrollView style={styles.scrollWrapper} contentContainerStyle={styles.scrollContent}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
+        <Text>{`TOKEN - ${token}`}</Text>
         <Button
-          onPress={() => Keyboard.dismiss()}
-          title="Hide keyboard"
+          onPress={this.props.dispatchSetToken}
+          title="Set token"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
+        />
+        <Button
+          onPress={this.props.dispatchClearToken}
+          title="Clear token"
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
         />
@@ -61,10 +66,10 @@ class Form extends React.Component {
           onValueChange={this.handleSwitch}
           value={this.state.switch}
         />
-        {people.map((person, index) => (
-          <View key={index} style={{ flex: 1, flexDirection: 'row' }}>
-            <Text style={styles.welcome}>{person.name}</Text>
-            <Button title="Delete" onPress={() => this.deletePerson(person)} />
+        {persons.map(person => (
+          <View key={person.id} style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+            <Text>{`${person.id} - ${person.name}`}</Text>
+            <Button title="Delete" onPress={() => this.deletePerson(person.id)} />
           </View>
         ))}
         <TextInput
@@ -85,12 +90,15 @@ class Form extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  people: state.people.people,
+  token: state.auth.token,
+  persons: state.people.persons,
 });
 
 const mapDispatchToProps = dispatch => ({
-  dispatchAddPerson: bindActionCreators(addPerson, dispatch),
-  dispatchDeletePerson: bindActionCreators(deletePerson, dispatch),
+  dispatchSetToken: bindActionCreators(Auth.setToken, dispatch),
+  dispatchClearToken: bindActionCreators(Auth.clearToken, dispatch),
+  dispatchAddPerson: bindActionCreators(People.addPerson, dispatch),
+  dispatchDeletePerson: bindActionCreators(People.deletePerson, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);

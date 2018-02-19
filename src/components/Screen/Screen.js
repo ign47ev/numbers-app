@@ -9,7 +9,7 @@ import styles from './ScreenStyles';
 class Screen extends React.Component {
 
   static propTypes = {
-    children: PropTypes.oneOfType(PropTypes.element, PropTypes.array),
+    children: PropTypes.oneOfType([PropTypes.element, PropTypes.array]),
     safeAreaColor: PropTypes.string,
     statusBarColor: PropTypes.string,
     navBarVisible: PropTypes.bool,

@@ -1,12 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Button, ScrollView, Text, ActionSheetIOS } from 'react-native';
 import Screen from '../../components/Screen/Screen';
 import Icon from '../../components/Icon/Icon';
+import { Numbers } from '../../actions';
 import { Images, Colors } from '@themes';
 
 // import styles from './StoreStyles';
 
 class Store extends React.Component {
+
+  componentDidMount() {
+    // this.props.dispatchGetNumbers();
+  }
 
   handleActionSheet = () => {
     ActionSheetIOS.showActionSheetWithOptions({
@@ -22,7 +29,9 @@ class Store extends React.Component {
   };
 
   render() {
-    const { navigation } = this.props;
+    const { navigation, numbers, dispatchGetNumbers } = this.props;
+
+    console.log({numbers});
 
     return (
       <Screen navigation={navigation}>
@@ -32,6 +41,10 @@ class Store extends React.Component {
           <Text style={{ fontFamily: 'Roboto', fontSize: 32, fontWeight: '500' }}>Roboto</Text>
           <Text style={{ fontFamily: 'Roboto', fontSize: 32, fontWeight: '700' }}>Roboto</Text>
           <Text style={{ fontFamily: 'Roboto', fontSize: 32, fontWeight: '900' }}>Roboto</Text>
+          <Button
+            onPress={() => dispatchGetNumbers('Linkin Park')}
+            title="Get numbers"
+          />
           <Button
             onPress={() => navigation.navigate('Blank', { title: 'Filters' })}
             title="Open Blank"
@@ -48,10 +61,21 @@ class Store extends React.Component {
             size={50}
             tintColor={Colors.blueGrey700}
           />
+          {numbers.map(number => (
+            <Text key={number.id}>{`${number.nomer} - ${number.cena}`}</Text>
+          ))}
         </ScrollView>
       </Screen>
     );
   }
 }
 
-export default Store;
+const mapStateToProps = state => ({
+  numbers: state.numbers,
+});
+
+const mapDispatchToProps = dispatch => ({
+  dispatchGetNumbers: bindActionCreators(Numbers.getNumbers, dispatch),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Store);
