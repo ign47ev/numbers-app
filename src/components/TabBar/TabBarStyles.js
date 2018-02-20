@@ -8,8 +8,8 @@ export default styles = StyleSheet.create({
     justifyContent: 'space-around',
     height: 56,
     borderTopWidth: 1,
-    borderTopColor: '#eee',
-    backgroundColor: '#fff',
+    borderTopColor: '#dfe3e8',
+    backgroundColor: '#fefefe',
 
   },
   containerAbsolute: {

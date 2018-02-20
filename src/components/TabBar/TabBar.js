@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View, Image, TouchableOpacity } from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { Image, TouchableOpacity } from 'react-native';
+import { SafeAreaView, withNavigation } from 'react-navigation';
 import { Images, Colors } from '@themes';
 import styles from './TabBarStyles';
 
@@ -30,7 +30,10 @@ class TabBar extends React.Component {
     const { routeName } = navigation.state;
 
     return (
-      <View style={[styles.container, overContent ? styles.containerAbsolute : null, style]}>
+      <SafeAreaView
+        forceInset={{ top: 'never', bottom: 'always' }}
+        style={[styles.container, overContent ? styles.containerAbsolute : null, style]}
+      >
         <TouchableOpacity
           style={styles.tab}
           activeOpacity={1}
@@ -41,7 +44,7 @@ class TabBar extends React.Component {
             fadeDuration={0}
             style={[
               styles.tabIcon,
-              { tintColor: routeName === 'Store' ? Colors.blueGrey500 : Colors.blueGrey100 }
+              { tintColor: routeName === 'Store' ? Colors.blueGrey900 : Colors.blueGrey100 }
             ]}
           />
         </TouchableOpacity>
@@ -55,7 +58,7 @@ class TabBar extends React.Component {
             fadeDuration={0}
             style={[
               styles.tabIcon,
-              { tintColor: routeName === 'Favorites' ? Colors.blueGrey500 : Colors.blueGrey100 }
+              { tintColor: routeName === 'Favorites' ? Colors.blueGrey900 : Colors.blueGrey100 }
             ]}
           />
         </TouchableOpacity>
@@ -69,7 +72,7 @@ class TabBar extends React.Component {
             fadeDuration={0}
             style={[
               styles.tabIcon,
-              { tintColor: routeName === 'Cart' ? Colors.blueGrey500 : Colors.blueGrey100 }
+              { tintColor: routeName === 'Cart' ? Colors.blueGrey900 : Colors.blueGrey100 }
             ]}
           />
         </TouchableOpacity>
@@ -83,11 +86,11 @@ class TabBar extends React.Component {
             fadeDuration={0}
             style={[
               styles.tabIcon,
-              { tintColor: routeName === 'Profile' ? Colors.blueGrey500 : Colors.blueGrey100 }
+              { tintColor: routeName === 'Profile' ? Colors.blueGrey900 : Colors.blueGrey100 }
             ]}
           />
         </TouchableOpacity>
-      </View>
+      </SafeAreaView>
     );
   }
 }

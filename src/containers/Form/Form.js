@@ -9,6 +9,7 @@ import {
   ScrollView,
   View,
   Button,
+  Keyboard,
 } from 'react-native';
 import { People, Auth } from '../../actions';
 import styles from './FormStyles'
@@ -18,6 +19,24 @@ class Form extends React.Component {
   state = {
     text: 'John',
     switch: true,
+  };
+
+  componentDidMount() {
+    this.keyboardWillShowListener = Keyboard.addListener('keyboardWillShow', this._keyboardWillShow);
+    this.keyboardWillHideListener = Keyboard.addListener('keyboardWillHide', this._keyboardWillHide);
+  }
+
+  componentWillUnmount() {
+    this.keyboardWillShowListener.remove();
+    this.keyboardWillHideListener.remove();
+  }
+
+  _keyboardWillShow = (keyboard) => {
+    console.log('show - ', keyboard.endCoordinates.height);
+  };
+
+  _keyboardWillHide = (keyboard) => {
+    console.log('hide - ', keyboard.endCoordinates.height);
   };
 
   addPerson = () => {
@@ -67,7 +86,8 @@ class Form extends React.Component {
           value={this.state.switch}
         />
         {persons.map(person => (
-          <View key={person.id} style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+          <View key={person.id}
+                style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
             <Text>{`${person.id} - ${person.name}`}</Text>
             <Button title="Delete" onPress={() => this.deletePerson(person.id)} />
           </View>

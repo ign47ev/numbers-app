@@ -9,8 +9,8 @@ export default styles = StyleSheet.create({
     justifyContent: 'space-around',
     height: 56,
     borderBottomWidth: 1,
-    borderBottomColor: '#eee',
-    backgroundColor: '#fff',
+    borderBottomColor: '#dfe3e8',
+    backgroundColor: '#fefefe',
   },
   containerAbsolute: {
     position: 'absolute',

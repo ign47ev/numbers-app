@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { SafeAreaView, withNavigation } from 'react-navigation';
 import Icon from '../Icon/Icon';
 import { Images, Colors } from '@themes';
 import styles from './NavBarStyles';
@@ -23,7 +23,10 @@ class NavBar extends React.Component {
     const { navigation, overContent, style } = this.props;
 
     return (
-      <View style={[styles.container, overContent ? styles.containerAbsolute : null, style]}>
+      <SafeAreaView
+        forceInset={{ top: 'always', bottom: 'never' }}
+        style={[styles.container, overContent ? styles.containerAbsolute : null, style]}
+      >
         <View style={styles.left}>
           <Icon
             source={Images.back}
@@ -51,7 +54,7 @@ class NavBar extends React.Component {
             onPress={() => navigation.goBack()}
           />
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 }
