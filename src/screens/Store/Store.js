@@ -14,13 +14,18 @@ class Store extends React.Component {
     const { navigation, numbers, dispatchGetNumbers } = this.props;
 
     return (
-      <Screen navigation={navigation}>
+      <Screen
+        navbar={{
+          title: 'Store',
+          // leftControls: [],
+          rightControls: [
+            {
+              icon: 'plus',
+              handler: () => alert('clicked plus'),
+            }
+          ],
+        }}>
         <ScrollView>
-          <Text style={{ fontFamily: 'Roboto', fontSize: 32, fontWeight: '300' }}>Roboto</Text>
-          <Text style={{ fontFamily: 'Roboto', fontSize: 32, fontWeight: '400' }}>Roboto</Text>
-          <Text style={{ fontFamily: 'Roboto', fontSize: 32, fontWeight: '500' }}>Roboto</Text>
-          <Text style={{ fontFamily: 'Roboto', fontSize: 32, fontWeight: '700' }}>Roboto</Text>
-          <Text style={{ fontFamily: 'Roboto', fontSize: 32, fontWeight: '900' }}>Roboto</Text>
           <Button
             onPress={() => dispatchGetNumbers()}
             title="Get numbers"

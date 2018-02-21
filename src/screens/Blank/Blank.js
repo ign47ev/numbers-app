@@ -9,11 +9,22 @@ class Blank extends React.Component {
     const { navigation } = this.props;
 
     return (
-      <Screen navigation={navigation}
-              // safeAreaColor="green"
-              // statusBarColor="light-content"
-              tabBarVisible={false}
-      >
+      <Screen
+        navbar={{
+          title: 'Blank',
+          leftControls: [
+            {
+              icon: 'back',
+              handler: () => navigation.goBack(),
+            }
+          ],
+          rightControls: [
+            {
+              icon: 'plus',
+              handler: () => alert('clicked plus'),
+            }
+          ],
+        }}>
         <ScrollView>
           <Text>Blank</Text>
           <Button onPress={() => navigation.goBack(null)} title="Go back" />

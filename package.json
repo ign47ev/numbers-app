@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios-simulator": "react-native run-ios --simulator='iPhone 8'",
-    "ios-device": "react-native run-android --device",
+    "ios-device": "react-native run-ios --device",
     "android-simulator": "cd $ANDROID_HOME/tools && ./emulator -avd Pixel_2_API_23 && react-native run-android",
     "android-device": "react-native run-android",
     "xcode": "open ios/NumbersApp.xcodeproj",

@@ -5,6 +5,7 @@ import Favorites from './screens/Favorites/Favorites';
 import Cart from './screens/Cart/Cart';
 import Profile from './screens/Profile/Profile';
 import Blank from './screens/Blank/Blank';
+import TabBar from './components/TabBar/TabBar';
 
 const TabNav = TabNavigator(
   {
@@ -26,7 +27,8 @@ const TabNav = TabNavigator(
     },
   },
   {
-    tabBarComponent: () => null,
+    tabBarComponent: TabBar,
+    tabBarPosition: 'bottom',
     swipeEnabled: false,
     animationEnabled: false,
   }

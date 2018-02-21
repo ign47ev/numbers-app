@@ -10,6 +10,10 @@ const colors = {
   blueGrey700: '#455A64',
   blueGrey800: '#37474F',
   blueGrey900: '#263238',
+  orangeA100: '#FFD180',
+  orangeA200: '#FFAB40',
+  orangeA400: '#FF9100',
+  orangeA700: '#FF6D00',
 };
 
 export default colors;
