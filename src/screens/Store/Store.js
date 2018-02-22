@@ -17,7 +17,7 @@ class Store extends React.Component {
       <Screen
         navbar={{
           title: 'Store',
-          // leftControls: [],
+          leftControls: [],
           rightControls: [
             {
               icon: 'plus',
@@ -25,7 +25,7 @@ class Store extends React.Component {
             }
           ],
         }}>
-        <ScrollView>
+        <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
           <Button
             onPress={() => dispatchGetNumbers()}
             title="Get numbers"
